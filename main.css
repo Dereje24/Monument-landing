@@ -5,6 +5,7 @@ header{
 	background-size: auto;
 	margin: 0 auto;
 	padding-bottom: 50px;
+	background-attachment: fixed;
 }
 header h3{
 	font-size: 20px;
@@ -65,10 +66,14 @@ section{
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+	margin: 50px auto;
 }
 article{
 	width: 30%;
 	height: 700px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	text-align: center;
 }
 article button{
 	text-transform: uppercase;
@@ -153,6 +158,7 @@ div section{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	width: 100%;
 }
 .pictuers h2{
 	text-transform: uppercase;
@@ -169,7 +175,13 @@ div section{
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	width: 30%;
 }
+.coloumn img{
+		height: auto;
+		width: 100%;
+		margin: 0 auto;
+	}
 .imageTop{
 	padding-bottom: 20px;
 }
@@ -215,4 +227,99 @@ textarea{
 	border-top: 2px solid black;
 	width: 100%;
 	padding-top:10px; 
+}
+
+@media screen and (max-width: 980px ){
+	article {
+		padding: 0 2%;
+	}
+	section{
+		display: flex;
+		flex-direction: column;
+	}
+	section p{
+		font-size: 16px;
+		margin: 0 auto;
+	}
+	div{
+		box-sizing: border-box; 
+	}
+	article button{
+		width: 50%;
+		margin: 0 auto;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	.touch form{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 10px 0;
+		border: none;
+		width: 70%;
+		margin: 0 auto;
+	}
+	.touch textarea{
+		width: 80%;
+	}
+	.touch button{
+	padding: 5px;
+	margin: 0 auto;
+	width: 80%;
+	box-sizing: border-box;
+	background-color: white;
+	}
+}
+@media-screen (max-width: 750px ){
+	article {
+		padding: 1%;
+	}
+	section{
+		display: flex;
+		flex-direction: column;
+	}
+	section p{
+		font-size: 10px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	div{
+		box-sizing: border-box; 
+	}
+	.pictuers{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	.about p{
+		font-size: 10px;
+		text-align: center;
+	}
+}
+	
+@media-screen (max-width: 420px ){
+	nav{
+		display: none;
+	}
+	section{
+		display: flex;
+		flex-direction: column;
+	}
+	section p{
+		font-size: 8px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	div{
+		box-sizing: border-box; 
+	}
+	.pictuers{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	.about p{
+		text-align: center;
+	}
+}
 }
